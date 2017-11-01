@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class Event < ApplicationRecord
-  belongs_to :user, optional: true
-  validates :title, presence: true
+  belongs_to :user
+  # validates :title, :user, presence: true
 end
+
+# , optional: true
