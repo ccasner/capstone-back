@@ -6,7 +6,7 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.date :date
       t.time :time
       t.integer :seats
-      t.text :body
+      t.string :body
 
       t.timestamps
     end
