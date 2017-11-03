@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20171101195345) do
     t.date "date"
     t.time "time"
     t.integer "seats"
-    t.text "body"
+    t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
