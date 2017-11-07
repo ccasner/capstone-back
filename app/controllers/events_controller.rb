@@ -1,16 +1,16 @@
 class EventsController < ProtectedController
-  before_action :set_event, only: [:update, :destroy]
+  before_action :set_event, only: [:show, :update, :destroy]
 
   # GET /events
   def index
-    @events = Event.all
+    @events = current_user.events.all
 
     render json: @events
   end
 
   # GET /events/1
   def show
-    @event = Event.find(params[:id])
+    @event = current_user.events.find(params[:id])
 
     render json: @event
   end
